@@ -1,0 +1,8 @@
+.label {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-background-color: rgba(255, 255, 255, 0.75);
+    -fx-text-fill: #002060;
+    -fx-border-color: #002060;
+    -fx-border-width: 5px
+}

@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.ImagePattern?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BattleShip.ReadyScreenController">
+   <children>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/Background(1).jpg" />
+         </image>
+      </ImageView>
+      <Polygon layoutX="150.0" layoutY="0.0" points="0.0, 0.0, 284.0, 0.0, 284.0, 709.0, 142.0, 851.0,  0.0, 709.0  " rotate="0" stroke="#FFC000" strokeWidth="5.0">
+         <fill>
+            <LinearGradient cycleMethod="NO_CYCLE" endX="0.0" endY="1.0" proportional="true" startX="0.0" startY="0.0">
+               <stops>
+                  <Stop color="#002060" offset="0.0" />
+                  <Stop color="#0070C0" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Polygon>
+      <Label alignment="CENTER" layoutX="489.5" layoutY="50.0" prefHeight="75.0" prefWidth="825.0" style="-fx-background-color: rgba(255, 255, 255, 0.75); -fx-border-color: #002060; -fx-border-width: 5;" text="Your turn" textAlignment="CENTER" textFill="#002060">
+         <font>
+            <Font name="Arial Bold" size="50.0" />
+         </font></Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffffbf" height="825.0" layoutX="1372.0" layoutY="175.0" width="400.0" />
+      <Button fx:id="button1" layoutX="1499.0" layoutY="250.0" mnemonicParsing="false" style="-fx-background-color: #00000000;" textFill="TRANSPARENT">
+         <graphic>
+            <ImageView fitHeight="75" fitWidth="150">
+               <image>
+                  <Image url="@Image/Ship2.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="button2" layoutX="1461.5" layoutY="400.0" mnemonicParsing="false" style="-fx-background-color: #00000000;">
+         <graphic>
+            <ImageView fitHeight="75" fitWidth="225">
+               <image>
+                  <Image url="@Image/Ship3.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="button3" layoutX="1461.5" layoutY="550.0" mnemonicParsing="false" style="-fx-background-color: #00000000;">
+         <graphic>
+            <ImageView fitHeight="75" fitWidth="225">
+               <image>
+                  <Image url="@Image/Ship3.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="button4" layoutX="1414.0" layoutY="700.0" mnemonicParsing="false" style="-fx-background-color: #00000000;">
+         <graphic>
+            <ImageView fitHeight="75" fitWidth="300">
+               <image>
+                  <Image url="@Image/Ship4.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="button5" layoutX="1376.5" layoutY="850.0" mnemonicParsing="false" style="-fx-background-color: #00000000;">
+         <graphic>
+            <ImageView fitHeight="75" fitWidth="375.0">
+               <image>
+                  <Image url="@Image/Ship5.png" />
+               </image>
+               <rotationAxis>
+                  <Point3D />
+               </rotationAxis>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Circle layoutX="292.0" layoutY="142.0" radius="100.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="5.0">
+         <fill>
+            <ImagePattern>
+               <image>
+                  <Image url="@Image/User-avatar.png" />
+               </image>
+            </ImagePattern>
+         </fill>
+      </Circle>
+      <Label layoutX="235.5" layoutY="286.0" text="Player 1" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" layoutX="242.0" layoutY="420.0" width="100.0">
+         <fill>
+            <ImagePattern>
+               <image>
+                  <Image url="@Image/Drag.png" />
+               </image>
+            </ImagePattern>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" layoutX="242.0" layoutY="609.0" width="100.0">
+         <fill>
+            <ImagePattern>
+               <image>
+                  <Image url="@Image/Tap.png" />
+               </image>
+            </ImagePattern>
+         </fill>
+      </Rectangle>
+      <Label layoutX="195.0" layoutY="375.0" text="Drag to move" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="199.5" layoutY="564.0" text="Tap to rotate" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Button alignment="CENTER" layoutX="150.0" layoutY="880.0" mnemonicParsing="false" onAction="#switchToGameScreen" prefHeight="100.0" prefWidth="284.0" stylesheets="@CSS/Button.css" text="Ready" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="50.0" />
+         </font>
+      </Button>
+      <GridPane fx:id="gridPane" layoutX="489.5" layoutY="175.0" prefHeight="825.0" prefWidth="825.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="75.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="75.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="75.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="75.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="75.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="75.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="75.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="75.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="75.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="75.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="75.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" />
+            <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="1" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="85.0" layoutY="10.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="2" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="160.0" layoutY="10.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="3" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="4" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="4">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="310.0" layoutY="10.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="5" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="5">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="385.0" layoutY="10.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="6" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="6">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="460.0" layoutY="10.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="7" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="7">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="535.0" layoutY="10.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="8" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="8">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="610.0" layoutY="10.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="9" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="9">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="685.0" layoutY="10.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="10" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="10">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="85.0" layoutY="10.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="A" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="85.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="B" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="160.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="C" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="235.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="D" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="310.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="E" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="385.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="F" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="460.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="G" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="535.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="H" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="8">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="610.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="I" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="9">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="685.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="J" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="10">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button layoutX="85.0" layoutY="85.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button layoutX="160.0" layoutY="85.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button layoutX="235.0" layoutY="85.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Button layoutX="310.0" layoutY="85.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <Button layoutX="385.0" layoutY="85.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <Button layoutX="460.0" layoutY="85.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <Button layoutX="535.0" layoutY="85.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+            <Button layoutX="610.0" layoutY="85.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+            <Button layoutX="685.0" layoutY="85.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="10" GridPane.rowIndex="1" />
+            <Button layoutX="760.0" layoutY="85.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button layoutX="85.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button layoutX="160.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Button layoutX="235.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Button layoutX="310.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <Button layoutX="385.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <Button layoutX="460.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+            <Button layoutX="535.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+            <Button layoutX="610.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="9" GridPane.rowIndex="2" />
+            <Button layoutX="685.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="10" GridPane.rowIndex="2" />
+            <Button layoutX="760.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button layoutX="685.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button layoutX="610.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Button layoutX="535.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Button layoutX="460.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <Button layoutX="385.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <Button layoutX="310.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+            <Button layoutX="235.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+            <Button layoutX="160.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="9" GridPane.rowIndex="3" />
+            <Button layoutX="85.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="10" GridPane.rowIndex="3" />
+            <Button layoutX="760.0" layoutY="235.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button layoutX="85.0" layoutY="310.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Button layoutX="160.0" layoutY="310.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Button layoutX="235.0" layoutY="310.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <Button layoutX="310.0" layoutY="310.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <Button layoutX="385.0" layoutY="310.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+            <Button layoutX="460.0" layoutY="310.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+            <Button layoutX="535.0" layoutY="310.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+            <Button layoutX="610.0" layoutY="310.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="9" GridPane.rowIndex="4" />
+            <Button layoutX="685.0" layoutY="310.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="10" GridPane.rowIndex="4" />
+            <Button layoutX="760.0" layoutY="310.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Button layoutX="85.0" layoutY="385.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Button layoutX="160.0" layoutY="385.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <Button layoutX="235.0" layoutY="385.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <Button layoutX="310.0" layoutY="385.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+            <Button layoutX="385.0" layoutY="385.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+            <Button layoutX="460.0" layoutY="385.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+            <Button layoutX="535.0" layoutY="385.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="8" GridPane.rowIndex="5" />
+            <Button layoutX="610.0" layoutY="385.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="9" GridPane.rowIndex="5" />
+            <Button layoutX="685.0" layoutY="385.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="10" GridPane.rowIndex="5" />
+            <Button layoutX="760.0" layoutY="385.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Button layoutX="85.0" layoutY="460.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <Button layoutX="160.0" layoutY="460.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <Button layoutX="235.0" layoutY="460.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+            <Button layoutX="310.0" layoutY="460.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+            <Button layoutX="385.0" layoutY="460.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+            <Button layoutX="460.0" layoutY="460.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+            <Button layoutX="535.0" layoutY="460.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="8" GridPane.rowIndex="6" />
+            <Button layoutX="610.0" layoutY="460.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="9" GridPane.rowIndex="6" />
+            <Button layoutX="685.0" layoutY="460.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="10" GridPane.rowIndex="6" />
+            <Button layoutX="760.0" layoutY="460.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Button layoutX="85.0" layoutY="535.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <Button layoutX="160.0" layoutY="535.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+            <Button layoutX="235.0" layoutY="535.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+            <Button layoutX="310.0" layoutY="535.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+            <Button layoutX="385.0" layoutY="535.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+            <Button layoutX="460.0" layoutY="535.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+            <Button layoutX="535.0" layoutY="535.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="8" GridPane.rowIndex="7" />
+            <Button layoutX="610.0" layoutY="535.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="9" GridPane.rowIndex="7" />
+            <Button layoutX="685.0" layoutY="535.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="10" GridPane.rowIndex="7" />
+            <Button layoutX="760.0" layoutY="535.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Button layoutX="85.0" layoutY="610.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+            <Button layoutX="160.0" layoutY="610.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+            <Button layoutX="235.0" layoutY="610.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+            <Button layoutX="310.0" layoutY="610.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+            <Button layoutX="385.0" layoutY="610.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+            <Button layoutX="460.0" layoutY="610.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="7" GridPane.rowIndex="8" />
+            <Button layoutX="535.0" layoutY="610.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="8" GridPane.rowIndex="8" />
+            <Button layoutX="610.0" layoutY="610.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="9" GridPane.rowIndex="8" />
+            <Button layoutX="685.0" layoutY="610.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="10" GridPane.rowIndex="8" />
+            <Button layoutX="760.0" layoutY="610.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Button layoutX="85.0" layoutY="685.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+            <Button layoutX="160.0" layoutY="685.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+            <Button layoutX="235.0" layoutY="685.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+            <Button layoutX="310.0" layoutY="685.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="5" GridPane.rowIndex="9" />
+            <Button layoutX="385.0" layoutY="685.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="6" GridPane.rowIndex="9" />
+            <Button layoutX="460.0" layoutY="685.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="7" GridPane.rowIndex="9" />
+            <Button layoutX="535.0" layoutY="685.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="8" GridPane.rowIndex="9" />
+            <Button layoutX="610.0" layoutY="685.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="9" GridPane.rowIndex="9" />
+            <Button layoutX="685.0" layoutY="685.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="10" GridPane.rowIndex="9" />
+            <Button layoutX="760.0" layoutY="685.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <Button layoutX="85.0" layoutY="760.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+            <Button layoutX="160.0" layoutY="760.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="3" GridPane.rowIndex="10" />
+            <Button layoutX="235.0" layoutY="760.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="4" GridPane.rowIndex="10" />
+            <Button layoutX="310.0" layoutY="760.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="5" GridPane.rowIndex="10" />
+            <Button layoutX="385.0" layoutY="760.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="6" GridPane.rowIndex="10" />
+            <Button layoutX="460.0" layoutY="760.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="7" GridPane.rowIndex="10" />
+            <Button layoutX="535.0" layoutY="760.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="8" GridPane.rowIndex="10" />
+            <Button layoutX="610.0" layoutY="760.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="9" GridPane.rowIndex="10" />
+            <Button layoutX="685.0" layoutY="760.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="10" GridPane.rowIndex="10" />
+         </children>
+         <children>
+            <Rectangle fx:id="ship1" width="150" height="75" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <fill>
+                  <ImagePattern>
+                     <image>
+                        <Image url="@/Image/Ship2.png" />
+                     </image>
+                  </ImagePattern>
+               </fill>
+            </Rectangle>
+            <Rectangle fx:id="ship2" width="225" height="75" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <fill>
+                  <ImagePattern>
+                     <image>
+                        <Image url="@/Image/Ship3.png" />
+                     </image>
+                  </ImagePattern>
+               </fill>
+            </Rectangle>
+            <Rectangle fx:id="ship3" width="225" height="75" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <fill>
+                  <ImagePattern>
+                     <image>
+                        <Image url="@/Image/Ship3.png" />
+                     </image>
+                  </ImagePattern>
+               </fill>
+            </Rectangle>
+            <Rectangle fx:id="ship4" width="300" height="75" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <fill>
+                  <ImagePattern>
+                     <image>
+                        <Image url="@/Image/Ship4.png" />
+                     </image>
+                  </ImagePattern>
+               </fill>
+            </Rectangle>
+            <Rectangle fx:id="ship5" width="375" height="75" GridPane.columnIndex="1" GridPane.rowIndex="9">
+               <fill>
+                  <ImagePattern>
+                     <image>
+                        <Image url="@/Image/Ship5.png" />
+                     </image>
+                  </ImagePattern>
+               </fill>
+            </Rectangle>
+         </children>
+
+      </GridPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,9 @@
+.button {
+    -fx-font-size: 50px;
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(to bottom, #002060, #0070C0);
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #FFC000;
+    -fx-border-width: 5px;
+}
+

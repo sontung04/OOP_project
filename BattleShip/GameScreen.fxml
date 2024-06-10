@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.ImagePattern?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="1080" prefWidth="1920" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BattleShip.GameScreenController">
+   <children>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/Background(1).jpg" />
+         </image>
+      </ImageView>
+      <Polygon layoutX="85.0" layoutY="0.0" points="0.0, 0.0, 284.0, 0.0, 284.0, 709.0, 142.0, 851.0,  0.0, 709.0" rotate="0" stroke="#FFC000" strokeWidth="5.0">
+         <fill>
+            <LinearGradient cycleMethod="NO_CYCLE" endX="0.0" endY="1.0" proportional="true" startX="0.0" startY="0.0">
+               <stops>
+                  <Stop color="#002060" offset="0.0" />
+                  <Stop color="#0070C0" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Polygon>
+      <Polygon layoutX="1364.0" layoutY="229.0" points="142.0, 0.0, 284.0, 142.0, 284.0, 851.0, 0.0, 851.0, 0.0, 142.0" rotate="0" stroke="#FFC000" strokeWidth="5.0">
+         <fill>
+            <LinearGradient cycleMethod="NO_CYCLE" endX="0.0" endY="1.0" proportional="true" startX="0.0" startY="0.0">
+               <stops>
+                  <Stop color="#002060" offset="0.0" />
+                  <Stop color="#0070C0" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Polygon>
+      <Label alignment="CENTER" layoutX="454.0" layoutY="50.0" prefHeight="75.0" prefWidth="825.0" style="-fx-background-color: #ff7b00;" text="Your turn" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="50.0" />
+         </font></Label>
+      <Circle layoutX="227.0" layoutY="142.0" radius="100.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="5.0">
+         <fill>
+            <ImagePattern>
+               <image>
+                  <Image url="@Image/User-avatar.png" />
+               </image>
+            </ImagePattern>
+         </fill>
+      </Circle>
+      <Label layoutX="169.0" layoutY="284.0" text="Player 1" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="ScorePlayer1" layoutX="167.5" layoutY="362.0" text="Score: 0" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" layoutX="177.0" layoutY="423.0" width="100.0">
+         <fill>
+            <ImagePattern>
+               <image>
+                  <Image url="@Image/Miss(1).png" />
+               </image>
+            </ImagePattern>
+         </fill>
+      </Rectangle>
+      <Label fx:id="miss1" layoutX="218.5" layoutY="523.0" text="0" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" layoutX="177.0" layoutY="585.0" width="100.0">
+         <fill>
+            <ImagePattern>
+               <image>
+                  <Image url="@Image/Hit(1).png" />
+               </image>
+            </ImagePattern>
+         </fill>
+      </Rectangle>
+      <Label fx:id="hit1" layoutX="218.5" layoutY="685.0" text="0" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Circle layoutX="1506.0" layoutY="459.0" radius="100.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="5.0">
+         <fill>
+            <ImagePattern>
+               <image>
+                  <Image url="@Image/User-avatar.png" />
+               </image>
+            </ImagePattern>
+         </fill>
+      </Circle>
+      <Label layoutX="1448.0" layoutY="601.0" text="Player 2" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="ScorePlayer2" layoutX="1446.5" layoutY="679.0" text="Score: 0" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" layoutX="1456.0" layoutY="740.0" width="100.0">
+         <fill>
+            <ImagePattern>
+               <image>
+                  <Image url="@Image/Miss(1).png" />
+               </image>
+            </ImagePattern>
+         </fill>
+      </Rectangle>
+      <Label fx:id="miss2" layoutX="1497.5" layoutY="840.0" text="0" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" layoutX="1456.0" layoutY="902.0" width="100.0">
+         <fill>
+            <ImagePattern>
+               <image>
+                  <Image url="@Image/Hit(1).png" />
+               </image>
+            </ImagePattern>
+         </fill>
+      </Rectangle>
+      <Label fx:id="hit2" layoutX="1497.5" layoutY="1002.0" text="0" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+   <GridPane layoutX="454.0" layoutY="175.0" prefHeight="825.0" prefWidth="825.0">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <Label prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" />
+      <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="1" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="85.0" layoutY="10.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="2" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="160.0" layoutY="10.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="3" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="4" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="4">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="310.0" layoutY="10.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="5" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="5">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="385.0" layoutY="10.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="6" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="6">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="460.0" layoutY="10.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="7" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="7">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="535.0" layoutY="10.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="8" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="8">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="610.0" layoutY="10.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="9" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="9">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="685.0" layoutY="10.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="10" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="10">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="85.0" layoutY="10.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="A" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="1">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="10.0" layoutY="85.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="B" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="2">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="10.0" layoutY="160.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="C" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="3">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="10.0" layoutY="235.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="D" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="4">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="10.0" layoutY="310.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="E" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="5">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="10.0" layoutY="385.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="F" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="6">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="10.0" layoutY="460.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="G" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="7">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="10.0" layoutY="535.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="H" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="8">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="10.0" layoutY="610.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="I" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="9">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="10.0" layoutY="685.0" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/LabelGridPane.css" text="J" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="10">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="shoot1" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="10.0" layoutY="85.0" width="75.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Rectangle fx:id="shoot2" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="85.0" width="75.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Rectangle fx:id="shoot3" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="160.0" layoutY="85.0" width="75.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      <Rectangle fx:id="shoot4" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="235.0" layoutY="85.0" width="75.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+      <Rectangle fx:id="shoot5" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="310.0" layoutY="85.0" width="75.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+      <Rectangle fx:id="shoot6" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="385.0" layoutY="85.0" width="75.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+      <Rectangle fx:id="shoot7" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="460.0" layoutY="85.0" width="75.0" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+      <Rectangle fx:id="shoot8" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="535.0" layoutY="85.0" width="75.0" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+      <Rectangle fx:id="shoot9" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="610.0" layoutY="85.0" width="75.0" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+      <Rectangle fx:id="shoot10" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="685.0" layoutY="85.0" width="75.0" GridPane.columnIndex="10" GridPane.rowIndex="1" />
+      <Rectangle fx:id="shoot11" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="85.0" width="75.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Rectangle fx:id="shoot12" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="160.0" layoutY="85.0" width="75.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Rectangle fx:id="shoot13" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="235.0" layoutY="85.0" width="75.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+      <Rectangle fx:id="shoot14" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="310.0" layoutY="85.0" width="75.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+      <Rectangle fx:id="shoot15" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="385.0" layoutY="85.0" width="75.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+      <Rectangle fx:id="shoot16" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="460.0" layoutY="85.0" width="75.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+      <Rectangle fx:id="shoot17" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="535.0" layoutY="85.0" width="75.0" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+      <Rectangle fx:id="shoot18" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="610.0" layoutY="85.0" width="75.0" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+      <Rectangle fx:id="shoot19" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="685.0" layoutY="85.0" width="75.0" GridPane.columnIndex="9" GridPane.rowIndex="2" />
+      <Rectangle fx:id="shoot20" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="760.0" layoutY="85.0" width="75.0" GridPane.columnIndex="10" GridPane.rowIndex="2" />
+      <Rectangle fx:id="shoot21" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="160.0" width="75.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Rectangle fx:id="shoot22" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="160.0" width="75.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <Rectangle fx:id="shoot23" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="160.0" width="75.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+      <Rectangle fx:id="shoot24" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="160.0" width="75.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+      <Rectangle fx:id="shoot25" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="160.0" width="75.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+      <Rectangle fx:id="shoot26" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="160.0" width="75.0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+      <Rectangle fx:id="shoot27" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="160.0" width="75.0" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+      <Rectangle fx:id="shoot28" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="160.0" width="75.0" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+      <Rectangle fx:id="shoot29" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="160.0" width="75.0" GridPane.columnIndex="9" GridPane.rowIndex="3" />
+      <Rectangle fx:id="shoot30" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="160.0" width="75.0" GridPane.columnIndex="10" GridPane.rowIndex="3" />
+      <Rectangle fx:id="shoot31" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="235.0" width="75.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <Rectangle fx:id="shoot32" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="235.0" width="75.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+      <Rectangle fx:id="shoot33" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="235.0" width="75.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+      <Rectangle fx:id="shoot34" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="235.0" width="75.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+      <Rectangle fx:id="shoot35" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="235.0" width="75.0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+      <Rectangle fx:id="shoot36" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="235.0" width="75.0" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+      <Rectangle fx:id="shoot37" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="235.0" width="75.0" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+      <Rectangle fx:id="shoot38" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="235.0" width="75.0" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+      <Rectangle fx:id="shoot39" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="235.0" width="75.0" GridPane.columnIndex="9" GridPane.rowIndex="4" />
+      <Rectangle fx:id="shoot40" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="235.0" width="75.0" GridPane.columnIndex="10" GridPane.rowIndex="4" />
+      <Rectangle fx:id="shoot41" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="310.0" width="75.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <Rectangle fx:id="shoot42" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="310.0" width="75.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+      <Rectangle fx:id="shoot43" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="310.0" width="75.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+      <Rectangle fx:id="shoot44" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="310.0" width="75.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+      <Rectangle fx:id="shoot45" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="310.0" width="75.0" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+      <Rectangle fx:id="shoot46" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="310.0" width="75.0" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+      <Rectangle fx:id="shoot47" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="310.0" width="75.0" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+      <Rectangle fx:id="shoot48" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="310.0" width="75.0" GridPane.columnIndex="8" GridPane.rowIndex="5" />
+      <Rectangle fx:id="shoot49" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="310.0" width="75.0" GridPane.columnIndex="9" GridPane.rowIndex="5" />
+      <Rectangle fx:id="shoot50" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="310.0" width="75.0" GridPane.columnIndex="10" GridPane.rowIndex="5" />
+      <Rectangle fx:id="shoot51" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="385.0" width="75.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <Rectangle fx:id="shoot52" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="385.0" width="75.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+      <Rectangle fx:id="shoot53" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="385.0" width="75.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+      <Rectangle fx:id="shoot54" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="385.0" width="75.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+      <Rectangle fx:id="shoot55" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="385.0" width="75.0" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+      <Rectangle fx:id="shoot56" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="385.0" width="75.0" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+      <Rectangle fx:id="shoot57" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="385.0" width="75.0" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+      <Rectangle fx:id="shoot58" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="385.0" width="75.0" GridPane.columnIndex="8" GridPane.rowIndex="6" />
+      <Rectangle fx:id="shoot59" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="385.0" width="75.0" GridPane.columnIndex="9" GridPane.rowIndex="6" />
+      <Rectangle fx:id="shoot60" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="385.0" width="75.0" GridPane.columnIndex="10" GridPane.rowIndex="6" />
+      <Rectangle fx:id="shoot61" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="460.0" width="75.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+      <Rectangle fx:id="shoot62" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="460.0" width="75.0" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+      <Rectangle fx:id="shoot63" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="460.0" width="75.0" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+      <Rectangle fx:id="shoot64" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="460.0" width="75.0" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+      <Rectangle fx:id="shoot65" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="460.0" width="75.0" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+      <Rectangle fx:id="shoot66" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="460.0" width="75.0" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+      <Rectangle fx:id="shoot67" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="460.0" width="75.0" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+      <Rectangle fx:id="shoot68" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="460.0" width="75.0" GridPane.columnIndex="8" GridPane.rowIndex="7" />
+      <Rectangle fx:id="shoot69" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="460.0" width="75.0" GridPane.columnIndex="9" GridPane.rowIndex="7" />
+      <Rectangle fx:id="shoot70" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="460.0" width="75.0" GridPane.columnIndex="10" GridPane.rowIndex="7" />
+      <Rectangle fx:id="shoot71" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="535.0" width="75.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+      <Rectangle fx:id="shoot72" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="535.0" width="75.0" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+      <Rectangle fx:id="shoot73" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="535.0" width="75.0" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+      <Rectangle fx:id="shoot74" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="535.0" width="75.0" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+      <Rectangle fx:id="shoot75" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="535.0" width="75.0" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+      <Rectangle fx:id="shoot76" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="535.0" width="75.0" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+      <Rectangle fx:id="shoot77" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="535.0" width="75.0" GridPane.columnIndex="7" GridPane.rowIndex="8" />
+      <Rectangle fx:id="shoot78" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="535.0" width="75.0" GridPane.columnIndex="8" GridPane.rowIndex="8" />
+      <Rectangle fx:id="shoot79" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="535.0" width="75.0" GridPane.columnIndex="9" GridPane.rowIndex="8" />
+      <Rectangle fx:id="shoot80" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="535.0" width="75.0" GridPane.columnIndex="10" GridPane.rowIndex="8" />
+      <Rectangle fx:id="shoot81" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="610.0" width="75.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+      <Rectangle fx:id="shoot82" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="610.0" width="75.0" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+      <Rectangle fx:id="shoot83" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="610.0" width="75.0" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+      <Rectangle fx:id="shoot84" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="610.0" width="75.0" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+      <Rectangle fx:id="shoot85" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="610.0" width="75.0" GridPane.columnIndex="5" GridPane.rowIndex="9" />
+      <Rectangle fx:id="shoot86" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="610.0" width="75.0" GridPane.columnIndex="6" GridPane.rowIndex="9" />
+      <Rectangle fx:id="shoot87" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="610.0" width="75.0" GridPane.columnIndex="7" GridPane.rowIndex="9" />
+      <Rectangle fx:id="shoot88" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="610.0" width="75.0" GridPane.columnIndex="8" GridPane.rowIndex="9" />
+      <Rectangle fx:id="shoot89" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="610.0" width="75.0" GridPane.columnIndex="9" GridPane.rowIndex="9" />
+      <Rectangle fx:id="shoot90" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="610.0" width="75.0" GridPane.columnIndex="10" GridPane.rowIndex="9" />
+      <Rectangle fx:id="shoot91" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="685.0" width="75.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+      <Rectangle fx:id="shoot92" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="685.0" width="75.0" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+      <Rectangle fx:id="shoot93" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="685.0" width="75.0" GridPane.columnIndex="3" GridPane.rowIndex="10" />
+      <Rectangle fx:id="shoot94" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="685.0" width="75.0" GridPane.columnIndex="4" GridPane.rowIndex="10" />
+      <Rectangle fx:id="shoot95" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="685.0" width="75.0" GridPane.columnIndex="5" GridPane.rowIndex="10" />
+      <Rectangle fx:id="shoot96" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="685.0" width="75.0" GridPane.columnIndex="6" GridPane.rowIndex="10" />
+      <Rectangle fx:id="shoot97" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="685.0" width="75.0" GridPane.columnIndex="7" GridPane.rowIndex="10" />
+      <Rectangle fx:id="shoot98" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="685.0" width="75.0" GridPane.columnIndex="8" GridPane.rowIndex="10" />
+      <Rectangle fx:id="shoot99" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="685.0" width="75.0" GridPane.columnIndex="9" GridPane.rowIndex="10" />
+      <Rectangle fx:id="shoot100" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="85.0" layoutY="685.0" width="75.0" GridPane.columnIndex="10" GridPane.rowIndex="10" />
+
+
+
+      <Button fx:id="button1" layoutX="10.0" layoutY="85.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Button fx:id="button2" layoutX="85.0" layoutY="85.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Button fx:id="button3" layoutX="160.0" layoutY="85.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      <Button fx:id="button4" layoutX="235.0" layoutY="85.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+      <Button fx:id="button5" layoutX="310.0" layoutY="85.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+      <Button fx:id="button6" layoutX="385.0" layoutY="85.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+      <Button fx:id="button7" layoutX="460.0" layoutY="85.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+      <Button fx:id="button8" layoutX="535.0" layoutY="85.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+      <Button fx:id="button9" layoutX="610.0" layoutY="85.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+      <Button fx:id="button10" layoutX="685.0" layoutY="85.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="10" GridPane.rowIndex="1" />
+      <Button fx:id="button11" layoutX="760.0" layoutY="85.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Button fx:id="button12" layoutX="85.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Button fx:id="button13" layoutX="160.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+      <Button fx:id="button14" layoutX="235.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+      <Button fx:id="button15" layoutX="310.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+      <Button fx:id="button16" layoutX="385.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+      <Button fx:id="button17" layoutX="460.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+      <Button fx:id="button18" layoutX="535.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+      <Button fx:id="button19" layoutX="610.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="9" GridPane.rowIndex="2" />
+      <Button fx:id="button20" layoutX="685.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="10" GridPane.rowIndex="2" />
+      <Button fx:id="button21" layoutX="760.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Button fx:id="button22" layoutX="685.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <Button fx:id="button23" layoutX="610.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+      <Button fx:id="button24" layoutX="535.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+      <Button fx:id="button25" layoutX="460.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+      <Button fx:id="button26" layoutX="385.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+      <Button fx:id="button27" layoutX="310.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+      <Button fx:id="button28" layoutX="235.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+      <Button fx:id="button29" layoutX="160.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="9" GridPane.rowIndex="3" />
+      <Button fx:id="button30" layoutX="85.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="10" GridPane.rowIndex="3" />
+      <Button fx:id="button31" layoutX="760.0" layoutY="235.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <Button fx:id="button32" layoutX="85.0" layoutY="310.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+      <Button fx:id="button33" layoutX="160.0" layoutY="310.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+      <Button fx:id="button34" layoutX="235.0" layoutY="310.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+      <Button fx:id="button35" layoutX="310.0" layoutY="310.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+      <Button fx:id="button36" layoutX="385.0" layoutY="310.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+      <Button fx:id="button37" layoutX="460.0" layoutY="310.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+      <Button fx:id="button38" layoutX="535.0" layoutY="310.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+      <Button fx:id="button39" layoutX="610.0" layoutY="310.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="9" GridPane.rowIndex="4" />
+      <Button fx:id="button40" layoutX="685.0" layoutY="310.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="10" GridPane.rowIndex="4" />
+      <Button fx:id="button41" layoutX="760.0" layoutY="310.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <Button fx:id="button42" layoutX="85.0" layoutY="385.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+      <Button fx:id="button43" layoutX="160.0" layoutY="385.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+      <Button fx:id="button44" layoutX="235.0" layoutY="385.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+      <Button fx:id="button45" layoutX="310.0" layoutY="385.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+      <Button fx:id="button46" layoutX="385.0" layoutY="385.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+      <Button fx:id="button47" layoutX="460.0" layoutY="385.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+      <Button fx:id="button48" layoutX="535.0" layoutY="385.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="8" GridPane.rowIndex="5" />
+      <Button fx:id="button49" layoutX="610.0" layoutY="385.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="9" GridPane.rowIndex="5" />
+      <Button fx:id="button50" layoutX="685.0" layoutY="385.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="10" GridPane.rowIndex="5" />
+      <Button fx:id="button51" layoutX="760.0" layoutY="385.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <Button fx:id="button52" layoutX="85.0" layoutY="460.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+      <Button fx:id="button53" layoutX="160.0" layoutY="460.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+      <Button fx:id="button54" layoutX="235.0" layoutY="460.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+      <Button fx:id="button55" layoutX="310.0" layoutY="460.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+      <Button fx:id="button56" layoutX="385.0" layoutY="460.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+      <Button fx:id="button57" layoutX="460.0" layoutY="460.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+      <Button fx:id="button58" layoutX="535.0" layoutY="460.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="8" GridPane.rowIndex="6" />
+      <Button fx:id="button59" layoutX="610.0" layoutY="460.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="9" GridPane.rowIndex="6" />
+      <Button fx:id="button60" layoutX="685.0" layoutY="460.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="10" GridPane.rowIndex="6" />
+      <Button fx:id="button61" layoutX="760.0" layoutY="460.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+      <Button fx:id="button62" layoutX="85.0" layoutY="535.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+      <Button fx:id="button63" layoutX="160.0" layoutY="535.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+      <Button fx:id="button64" layoutX="235.0" layoutY="535.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+      <Button fx:id="button65" layoutX="310.0" layoutY="535.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+      <Button fx:id="button66" layoutX="385.0" layoutY="535.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+      <Button fx:id="button67" layoutX="460.0" layoutY="535.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+      <Button fx:id="button68" layoutX="535.0" layoutY="535.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="8" GridPane.rowIndex="7" />
+      <Button fx:id="button69" layoutX="610.0" layoutY="535.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="9" GridPane.rowIndex="7" />
+      <Button fx:id="button70" layoutX="685.0" layoutY="535.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="10" GridPane.rowIndex="7" />
+      <Button fx:id="button71" layoutX="760.0" layoutY="535.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+      <Button fx:id="button72" layoutX="85.0" layoutY="610.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+      <Button fx:id="button73" layoutX="160.0" layoutY="610.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+      <Button fx:id="button74" layoutX="235.0" layoutY="610.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+      <Button fx:id="button75" layoutX="310.0" layoutY="610.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+      <Button fx:id="button76" layoutX="385.0" layoutY="610.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+      <Button fx:id="button77" layoutX="460.0" layoutY="610.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="7" GridPane.rowIndex="8" />
+      <Button fx:id="button78" layoutX="535.0" layoutY="610.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="8" GridPane.rowIndex="8" />
+      <Button fx:id="button79" layoutX="610.0" layoutY="610.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="9" GridPane.rowIndex="8" />
+      <Button fx:id="button80" layoutX="685.0" layoutY="610.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="10" GridPane.rowIndex="8" />
+      <Button fx:id="button81" layoutX="760.0" layoutY="610.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+      <Button fx:id="button82" layoutX="85.0" layoutY="685.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+      <Button fx:id="button83" layoutX="160.0" layoutY="685.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+      <Button fx:id="button84" layoutX="235.0" layoutY="685.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+      <Button fx:id="button85" layoutX="310.0" layoutY="685.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="5" GridPane.rowIndex="9" />
+      <Button fx:id="button86" layoutX="385.0" layoutY="685.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="6" GridPane.rowIndex="9" />
+      <Button fx:id="button87" layoutX="460.0" layoutY="685.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="7" GridPane.rowIndex="9" />
+      <Button fx:id="button88" layoutX="535.0" layoutY="685.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="8" GridPane.rowIndex="9" />
+      <Button fx:id="button89" layoutX="610.0" layoutY="685.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="9" GridPane.rowIndex="9" />
+      <Button fx:id="button90" layoutX="685.0" layoutY="685.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="10" GridPane.rowIndex="9" />
+      <Button fx:id="button91" layoutX="760.0" layoutY="685.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+      <Button fx:id="button92" layoutX="85.0" layoutY="760.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+      <Button fx:id="button93" layoutX="160.0" layoutY="760.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="3" GridPane.rowIndex="10" />
+      <Button fx:id="button94" layoutX="235.0" layoutY="760.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="4" GridPane.rowIndex="10" />
+      <Button fx:id="button95" layoutX="310.0" layoutY="760.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="5" GridPane.rowIndex="10" />
+      <Button fx:id="button96" layoutX="385.0" layoutY="760.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="6" GridPane.rowIndex="10" />
+      <Button fx:id="button97" layoutX="460.0" layoutY="760.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="7" GridPane.rowIndex="10" />
+      <Button fx:id="button98" layoutX="535.0" layoutY="760.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="8" GridPane.rowIndex="10" />
+      <Button fx:id="button99" layoutX="610.0" layoutY="760.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="9" GridPane.rowIndex="10" />
+      <Button fx:id="button100" layoutX="685.0" layoutY="760.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" stylesheets="@CSS/ButtonGridPane.css" GridPane.columnIndex="10" GridPane.rowIndex="10" />
+   </children>
+   </GridPane>
+      <Button contentDisplay="CENTER" layoutX="1685.0" layoutY="50.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-radius: 75; -fx-background-color: linear-gradient(to bottom, #002060, #0070C0); -fx-border-radius: 75; -fx-border-color: #FFC000; -fx-border-width: 5;">
+         <graphic>
+            <ImageView fitHeight="125.0" fitWidth="125.0">
+               <image>
+                  <Image url="@Image/Setting.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
